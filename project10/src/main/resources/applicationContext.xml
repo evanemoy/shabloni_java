@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+    <bean id="boxer" class="com.example.project10.Boxer"/>
+    <bean id="street" class="com.example.project10.StreetFighter"/>
+    <bean id="judoka" class="com.example.project10.Judoka"/>
+</beans>

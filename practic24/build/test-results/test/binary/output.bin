@@ -1,0 +1,4 @@
+K15:11:45.022 [Test worker] INFO  ru.practic24.UserService – saving user
+T15:11:45.078 [Test worker] INFO  ru.practic24.UserService – finding user by name
+M15:11:45.095 [Test worker] INFO  ru.practic24.UserService – deleting user
+Q15:11:45.152 [Test worker] INFO  ru.practic24.UserService – finding all users

@@ -1,0 +1,647 @@
+1706 [main] INFO  ru.practic23.Main � Starting Main using Java 19.0.2 with PID 11496 (C:\java9-16\practic23\build\classes\java\main started by ���� in C:\java9-16\practic23)
+1715 [main] INFO  ru.practic23.Main � No active profile set, falling back to 1 default profile: "default"
+4191 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4340 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 131 ms. Found 2 JPA repository interfaces.
+5348 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext � Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+5379 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger � 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+5420 [main] ERROR o.s.boot.SpringApplication � Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at ru.practic23.Main.main(Main.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	... 36 common frames omitted
+1637 [main] INFO  ru.practic23.Main � Starting Main using Java 19.0.2 with PID 9232 (C:\java9-16\practic23\build\classes\java\main started by ���� in C:\java9-16\practic23)
+1642 [main] INFO  ru.practic23.Main � No active profile set, falling back to 1 default profile: "default"
+4276 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4434 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+5366 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext � Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+5397 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger � 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+5445 [main] ERROR o.s.boot.SpringApplication � Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at ru.practic23.Main.main(Main.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	... 36 common frames omitted
+2067 [main] INFO  ru.practic23.Main � Starting Main using Java 19.0.2 with PID 14924 (C:\java9-16\practic23\build\classes\java\main started by ���� in C:\java9-16\practic23)
+2072 [main] INFO  ru.practic23.Main � No active profile set, falling back to 1 default profile: "default"
+6060 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+6266 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 184 ms. Found 2 JPA repository interfaces.
+7694 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext � Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+7745 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger � 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+7800 [main] ERROR o.s.boot.SpringApplication � Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at ru.practic23.Main.main(Main.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	... 36 common frames omitted
+822  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 2536 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+824  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1681 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1730 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2054 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+2068 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2085 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at ru.practic23.Main.main(Main.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511)
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: ru.practic22.UserService [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	... 36 common frames omitted
+848  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 3960 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+850  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1745 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2405 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2414 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2416 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2416 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2479 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2479 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1592 ms
+2763 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2830 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2869 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+3133 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+3161 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3251 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ae2c01b
+3252 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+4142 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+4162 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4162 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – relation "post" does not exist, skipping
+4163 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4163 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "post" does not exist, skipping
+4164 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4165 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "users" does not exist, skipping
+4198 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4496 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory – Hibernate is in classpath; If applicable, HQL parser will be used.
+4838 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5289 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5365 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ddf193a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17a5cb99, org.springframework.security.web.context.SecurityContextHolderFilter@10faebc9, org.springframework.security.web.header.HeaderWriterFilter@79c514e4, org.springframework.security.web.authentication.logout.LogoutFilter@162ccd19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52268f73, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@283a5c2b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@808fa1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75f3c0c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71b9b035, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63c78e5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b52ce28, org.springframework.security.web.access.ExceptionTranslationFilter@44f433db, org.springframework.security.web.access.intercept.AuthorizationFilter@56f1db5f]
+5777 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [ru.practic23.ScheduledTask@2771e501] with key 'scheduledTask'
+5780 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+5797 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+5800 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+5802 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
+5819 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+5835 [main] ERROR o.s.boot.SpringApplication – Application run failed
+org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [ru.practic23.ScheduledTask@2771e501] with key 'scheduledTask'
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:641)
+	at org.springframework.jmx.export.MBeanExporter.lambda$registerBeans$2(MBeanExporter.java:568)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.springframework.jmx.export.MBeanExporter.registerBeans(MBeanExporter.java:568)
+	at org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at ru.practic23.Main.main(Main.java:10)
+Caused by: javax.management.InstanceAlreadyExistsException: MXBean already registered with name ru.practic22:type=ScheduledTask
+	at java.management/com.sun.jmx.mbeanserver.MXBeanLookup.addReference(MXBeanLookup.java:152)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanSupport.register(MXBeanSupport.java:160)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.preRegister2(MBeanSupport.java:173)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:924)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:895)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523)
+	at org.springframework.jmx.support.MBeanRegistrationSupport.doRegister(MBeanRegistrationSupport.java:138)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:687)
+	at org.springframework.jmx.export.MBeanExporter.registerBeanNameOrInstance(MBeanExporter.java:631)
+	... 14 common frames omitted
+909  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 1672 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+911  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1816 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1870 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2551 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2561 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2563 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2563 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2629 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2629 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1679 ms
+2912 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2976 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+3011 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+3244 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+3272 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3372 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f428e6e
+3374 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+4326 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+4349 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4349 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – relation "post" does not exist, skipping
+4351 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4351 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "post" does not exist, skipping
+4353 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+4353 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "users" does not exist, skipping
+4386 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4684 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory – Hibernate is in classpath; If applicable, HQL parser will be used.
+5041 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5475 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5546 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28ec35e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5068a2b1, org.springframework.security.web.context.SecurityContextHolderFilter@53a20aab, org.springframework.security.web.header.HeaderWriterFilter@2be9425f, org.springframework.security.web.authentication.logout.LogoutFilter@541c32de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@11e8e183, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@36dab184, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@52268f73, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@35b5056e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79c514e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@189f5ed8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3938e876, org.springframework.security.web.access.ExceptionTranslationFilter@4d2dc60, org.springframework.security.web.access.intercept.AuthorizationFilter@5f97d43e]
+5971 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5976 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+5980 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+5995 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+5998 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+6017 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+6034 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+613  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 14700 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+615  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1453 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1499 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2134 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2143 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2145 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2145 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2202 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2203 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1551 ms
+2474 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2538 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2569 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2789 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2814 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2898 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e4b5da1
+2899 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3831 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3851 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3851 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – relation "post" does not exist, skipping
+3852 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3853 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "post" does not exist, skipping
+3853 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3854 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "users" does not exist, skipping
+3885 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4190 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory – Hibernate is in classpath; If applicable, HQL parser will be used.
+4565 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5000 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5080 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21bf94d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dad97ed, org.springframework.security.web.context.SecurityContextHolderFilter@1398e3aa, org.springframework.security.web.header.HeaderWriterFilter@67171221, org.springframework.security.web.authentication.logout.LogoutFilter@53a20aab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6daeaff2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@ba76911, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7479b19a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4460edf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e9c59ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4528a8bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4be8c1bb, org.springframework.security.web.access.ExceptionTranslationFilter@2ff30a75, org.springframework.security.web.access.intercept.AuthorizationFilter@7505ef47]
+5526 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5531 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+5534 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+5550 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+5553 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+5570 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+5586 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+578  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 13384 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+580  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1444 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1489 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2096 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 8080 (http)
+2105 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2107 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2107 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2163 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2163 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1549 ms
+2401 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2462 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2495 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2718 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2745 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2831 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b5af65b
+2833 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3753 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3773 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3773 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – relation "post" does not exist, skipping
+3774 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3774 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "post" does not exist, skipping
+3775 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3775 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "users" does not exist, skipping
+3815 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4113 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory – Hibernate is in classpath; If applicable, HQL parser will be used.
+4457 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4940 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ae45ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cced001, org.springframework.security.web.context.SecurityContextHolderFilter@5248474e, org.springframework.security.web.header.HeaderWriterFilter@479f1d09, org.springframework.security.web.authentication.logout.LogoutFilter@772357e9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7061a5e7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1361b39a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c927487, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4fbebd8e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cfc4475, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@503eac4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79d31e24, org.springframework.security.web.access.ExceptionTranslationFilter@5b51a4c7, org.springframework.security.web.access.intercept.AuthorizationFilter@142dbf1a]
+5386 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5392 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+5395 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+5410 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+5414 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+5432 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger – 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+5450 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+627  [main] INFO  ru.practic23.Main – Starting Main using Java 17.0.11 with PID 3640 (C:\Users\Александр\Desktop\practic23\build\classes\java\main started by Aleksander in C:\Users\Александр\Desktop\practic23)
+629  [main] INFO  ru.practic23.Main – No active profile set, falling back to 1 default profile: "default"
+1517 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1566 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2242 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port 9090 (http)
+2250 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-9090"]
+2252 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2252 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/10.1.19]
+2310 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2310 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1644 ms
+2594 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2658 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 6.4.4.Final
+2690 [main] INFO  o.h.c.i.RegionFactoryInitiator – HHH000026: Second-level cache disabled
+2932 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo – No LoadTimeWeaver setup: ignoring JPA class transformer
+2957 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3048 [main] INFO  com.zaxxer.hikari.pool.HikariPool – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3c3cd7a5
+3049 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3956 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+3975 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3976 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – relation "post" does not exist, skipping
+3977 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3977 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "post" does not exist, skipping
+3978 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – SQL Warning Code: 0, SQLState: 00000
+3978 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper – table "users" does not exist, skipping
+4007 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4304 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory – Hibernate is in classpath; If applicable, HQL parser will be used.
+4668 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5138 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5218 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ddf193a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17a5cb99, org.springframework.security.web.context.SecurityContextHolderFilter@10faebc9, org.springframework.security.web.header.HeaderWriterFilter@79c514e4, org.springframework.security.web.authentication.logout.LogoutFilter@162ccd19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52268f73, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@283a5c2b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@808fa1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75f3c0c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71b9b035, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63c78e5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b52ce28, org.springframework.security.web.access.ExceptionTranslationFilter@44f433db, org.springframework.security.web.access.intercept.AuthorizationFilter@56f1db5f]
+5642 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-9090"]
+5658 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port 9090 (http) with context path ''
+5675 [main] INFO  ru.practic23.Main – Started Main in 5.35 seconds (process running for 6.098)
+5682 [scheduling-1] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler – Unexpected error occurred in scheduled task
+java.nio.file.NoSuchFileException: C:\study\jaba\practic22\src\main\resources\entities
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:199)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.nio.file.FileTreeWalker.getAttributes(FileTreeWalker.java:220)
+	at java.base/java.nio.file.FileTreeWalker.visit(FileTreeWalker.java:277)
+	at java.base/java.nio.file.FileTreeWalker.walk(FileTreeWalker.java:323)
+	at java.base/java.nio.file.FileTreeIterator.<init>(FileTreeIterator.java:71)
+	at java.base/java.nio.file.Files.walk(Files.java:3918)
+	at java.base/java.nio.file.Files.walk(Files.java:3973)
+	at ru.practic23.ScheduledTask.remadeFiles(ScheduledTask.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+53196 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+53202 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3c3cd7a5 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53203 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@12181e96 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53203 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@69a457db (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53204 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7ee15350 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53204 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@32215b96 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53205 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@609f0fea (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53206 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2b4e86ad (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53207 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5fc12b47 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53207 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@678426c2 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53208 [SpringApplicationShutdownHook] WARN  com.zaxxer.hikari.pool.PoolBase – HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7f7c9587 (Соединение уже было закрыто). Possibly consider using a shorter maxLifetime value.
+53257 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+53263 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+1768 [main] INFO  ru.practic23.Main � Starting Main using Java 17.0.11 with PID 13484 (C:\java9-16\practic23\build\classes\java\main started by ���� in C:\java9-16\practic23)
+1774 [main] INFO  ru.practic23.Main � No active profile set, falling back to 1 default profile: "default"
+4383 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+4514 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+6526 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer � Tomcat initialized with port 9090 (http)
+6550 [main] INFO  o.a.coyote.http11.Http11NioProtocol � Initializing ProtocolHandler ["http-nio-9090"]
+6555 [main] INFO  o.a.catalina.core.StandardService � Starting service [Tomcat]
+6556 [main] INFO  o.a.catalina.core.StandardEngine � Starting Servlet engine: [Apache Tomcat/10.1.19]
+6839 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] � Initializing Spring embedded WebApplicationContext
+6841 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext � Root WebApplicationContext: initialization completed in 4976 ms
+7586 [main] INFO  o.h.jpa.internal.util.LogHelper � HHH000204: Processing PersistenceUnitInfo [name: default]
+7758 [main] INFO  org.hibernate.Version � HHH000412: Hibernate ORM core version 6.4.4.Final
+7846 [main] INFO  o.h.c.i.RegionFactoryInitiator � HHH000026: Second-level cache disabled
+8487 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo � No LoadTimeWeaver setup: ignoring JPA class transformer
+8576 [main] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Starting...
+8901 [main] INFO  com.zaxxer.hikari.pool.HikariPool � HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@299cab08
+8905 [main] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Start completed.
+11372 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator � HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11606 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Initialized JPA EntityManagerFactory for persistence unit 'default'
+12443 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory � Hibernate is in classpath; If applicable, HQL parser will be used.
+13756 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration � spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14796 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver � Exposing 1 endpoint(s) beneath base path '/actuator'
+15280 [main] INFO  o.s.s.w.DefaultSecurityFilterChain � Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d17b6ad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@564b221e, org.springframework.security.web.context.SecurityContextHolderFilter@2eb95662, org.springframework.security.web.header.HeaderWriterFilter@5066a895, org.springframework.security.web.authentication.logout.LogoutFilter@24a38ef3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@751f445a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@74a121fe, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@72e36d0f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5503e208, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6987a0f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12bb0322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5031786b, org.springframework.security.web.access.ExceptionTranslationFilter@356c8c1b, org.springframework.security.web.access.intercept.AuthorizationFilter@47620803]
+16575 [main] INFO  o.a.coyote.http11.Http11NioProtocol � Starting ProtocolHandler ["http-nio-9090"]
+16640 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer � Tomcat started on port 9090 (http) with context path ''
+16698 [main] INFO  ru.practic23.Main � Started Main in 15.747 seconds (process running for 17.167)
+16741 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+16757 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+16807 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+17277 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+33093 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] � Initializing Spring DispatcherServlet 'dispatcherServlet'
+33094 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet � Initializing Servlet 'dispatcherServlet'
+33099 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet � Completed initialization in 4 ms
+33317 [http-nio-9090-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase � Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [104] milliseconds.
+76700 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+76702 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+76703 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+76726 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+136702 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+136703 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+136704 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+136721 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+196702 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+196703 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+196704 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+196734 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+254100 [http-nio-9090-exec-4] INFO  ru.practic23.UserService � finding all users
+256694 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+256695 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+256697 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+256715 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+259592 [http-nio-9090-exec-5] INFO  ru.practic23.UserService � saving user
+263966 [http-nio-9090-exec-7] INFO  ru.practic23.UserService � finding all users
+316696 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+316697 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+316698 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+316717 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+376698 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+376698 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+376700 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+376723 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+436688 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+436689 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+436690 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+436709 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+496697 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+496699 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+496701 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+496717 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+556702 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+556703 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+556704 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+556722 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+616702 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+616703 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+616706 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+616727 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+676703 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+676704 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+676705 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+676721 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
+736695 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+736696 [scheduling-1] INFO  ru.practic23.ScheduledTask � deleting file in scheduled
+736698 [scheduling-1] INFO  ru.practic23.UserService � finding all users
+736718 [scheduling-1] INFO  ru.practic23.ScheduledTask � written to files in scheduled
